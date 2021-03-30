@@ -1,0 +1,128 @@
+.frame_menu {
+    background-color: #f1fcff;
+    min-width: 240px;
+    /* max-width: 20%; */
+    padding: 10px;
+}
+.p_first {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    background-color: #f5f5f5;
+    padding: 0 10px;
+    margin: 0 10px 8px 0;
+}
+    .p_first a {
+        /* text-decoration: none; */
+        color: #181818;
+    }
+.p_second {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    background-color: #f5f5f5;
+    padding: 0 20px;
+    margin: 4px 10px 6px 20px;
+}
+    .p_second a {
+        /* text-decoration: none; */
+        /* color: #0b5cab; */
+        color: #091c2e;
+    }
+.p_third {
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.4rem;
+    background-color: #f5f5f5;
+    padding: 0 40px;
+    margin: 4px auto 4px 20px;
+}
+    .p_third a {
+        /* text-decoration: none; */
+        color: #07294b;
+    }
+
+.frameline, .frameup, .framesub {
+    background-color: #f1fcff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.framediv {
+}
+.frameline {
+    display: block;
+    height: 100%;
+    transform-origin: center top;
+    transform: scaleY(1);
+}
+.frameup {
+    display: block;
+    height: 0;
+    transform-origin: center top;
+    transform: scaleY(0);
+}
+.framesub {
+    display: block;
+    height: 0;
+    transform: scaleY(0);
+}
+
+.framediv:target .frameline {
+    height: 0;
+    transform: scaleY(0);
+}
+.framediv:target .frameup {
+    height: 100%;
+    transform: scaleY(1);
+}
+.framediv:target .framesub {
+    height: 100%;
+    transform: scaleY(1);
+}
+
+/* начало второго уровня */
+.frameline_2, .frameup_2, .framesub_2 {
+    background-color: #f1fcff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.frameline_2 {
+    display: block;
+    height: 100%;
+    transform-origin: center top;
+    transform: scaleY(1);
+}
+.frameup_2 {
+    display: block;
+    height: 0;
+    transform-origin: center top;
+    transform: scaleY(0);
+}
+.framesub_2 {
+     display: block;
+    height: 0;
+    transform: scaleY(0);
+}
+
+.framesub:target {
+    height: 100%;
+    transform: scaleY(1);
+}
+.framesub:target .frameline_2 {
+    height: 0;
+    transform: scaleY(0);
+}
+.framesub:target .frameup_2 {
+    height: 100%;
+    transform: scaleY(1);
+}
+.framesub:target .framesub_2 {
+    height: 100%;
+    transform: scaleY(1);
+}
+.frame_menu:target .framesub {
+    height: 0;
+    transform: scaleY(0);
+}

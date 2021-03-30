@@ -1,0 +1,204 @@
+/* оформление мультиколоночного блока (начало) */
+.multicolumns {
+    display: flex;
+    /* width: 97vw; */
+    max-width: 1260px;
+    margin: 0 auto;
+    margin-bottom: 1vh;
+    background-color: #f9fbfc;
+    font-family: sans-serif;
+    color: rgb(1, 62, 80);
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+    z-index: 1;
+}
+.multicolumns p {
+    line-height: 1.1rem;
+    margin: 0;
+    text-align: justify;
+}
+.multicolumns h3 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    color: rgb(2, 49, 63);
+}
+.multicolumns h4 {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    color: rgb(2, 49, 63);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1260px;
+    /* max-width: 420px; */
+    box-sizing: border-box;
+    padding: 0 1vw;
+    margin-right: 0.8vw;
+    margin-bottom: 1vh;
+    background-color: #f1f7f89d;
+    z-index: 0;
+}
+.column:last-of-type {
+    margin-right: 0;
+}
+.column_subblock img {
+    margin: 0 1vw 0.5vh 0;
+}
+.column_subblock video {
+    position: relative;
+    background-color: none;
+    margin: 0 1vw 0.5vh 0;
+}
+
+.pic_verysmall { /* на треть экрана мобильного */
+    width: 30%;
+    max-width: 140px;
+    padding-right: 1vw;
+    padding-bottom: 0.4vh;
+    float: left;
+}
+.pic_small { /* на половину экрана мобильного */
+    width: 50%;
+    max-width: 200px;
+    padding-right: 1vw;
+    padding-bottom: 0.4vh;
+    float: left;
+}
+.pic_medium { /* полный экран мобильного */
+    width: 100%;
+    max-width: 400px;
+    padding-right: 1vw;
+    padding-bottom: 0.4vh;
+    float: left;
+}
+.pic_wide { /* полный экран планшета - половина десктопа */
+    width: 100%;
+    max-width: 720px;
+    padding-right: 1vw;
+    padding-bottom: 0.4vh;
+    float: left;
+}
+.pic_verywide { /* полный экран десктопа */
+    width: 100%;
+    max-width: 1260px;
+    padding-right: 1vw;
+    padding-bottom: 0.4vh;
+}
+
+.video_small {
+    width: 240px;
+    float: left;
+}
+
+/* оформление списков (начало) */
+.column_subblock ul {
+    list-style: circle;
+    list-style-position: inside;
+}
+.column_subblock li {
+    /* font-size: 0.8rem; */
+    line-height: 1.1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* оформление списков (конец) */
+
+/* оформление таблиц (начало) */
+.column_subblock table {
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    color: rgb(1, 62, 80);
+}
+.column_subblock caption {
+    font-weight: 600;
+    line-height: 1.1rem;
+    text-align: left;
+    padding-left: 0.4rem;
+}
+.column_subblock table td {
+    border-right: solid 1px black;
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 1.1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.3rem;
+}
+.column_subblock table td:first-of-type {
+    font-weight: 600;
+    text-align: left;
+}
+.column_subblock table td:last-of-type {
+    border-right: none;
+}
+.column_subblock table tr {
+    border-bottom: solid 1px black;
+}
+.column_subblock table tr:first-of-type {
+    font-weight: 600;
+}
+.column_subblock table tr:last-of-type {
+    border-bottom: none;
+}
+/* оформление таблиц (конец) */
+
+@media (min-width: 732px) and (max-width: 1259px) {
+    .multicolumns {
+        width: 96vw;
+    }
+}
+
+@media (min-width: 420px) and (max-width: 731px) {
+    .multicolumns {
+    width: 95vw;
+    flex-direction: column;
+    align-items: center;
+    }
+    .pic_medium { /* полный экран мобильного */
+        float: unset;
+    }
+    .pic_wide { /* полный экран планшета - половина десктопа */
+        float: unset;
+    }
+}
+@media (min-width: 560px) and (max-width: 731px) {
+    .pic_medium { /* полный экран мобильного */
+        float: left;
+    }
+}
+@media (max-width: 419px) {
+    .multicolumns {
+    width: 94vw;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .pic_medium { /* полный экран мобильного */
+        float: unset;
+    }
+    .pic_wide { /* полный экран планшета - половина десктопа */
+        float: unset;
+    }
+    .multicolumns h3 {
+    margin-top: unset;
+    margin-bottom: unset;
+    margin: 0.3rem auto;
+    }
+    .multicolumns h4 {
+    margin-top: unset;
+    margin-bottom: unset;
+    margin: 0.2rem auto;
+    }
+}
+/* оформление мультиколоночного блока (конец) */

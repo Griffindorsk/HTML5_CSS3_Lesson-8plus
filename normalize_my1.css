@@ -1,0 +1,31 @@
+/* normalize part (начало) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+b, strong {
+    font-weight: bolder;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+    sub {
+        bottom: -0.25em;
+    }
+    sup {
+        top: -0.5em;
+    }
+ul {
+    list-style-position: inside;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/* normalize part (конец) */
